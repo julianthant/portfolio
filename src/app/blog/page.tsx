@@ -249,14 +249,14 @@ const page: FC<pageProps> = ({}) => {
           <div className="gap-12 grid statsMD:grid-flow-col auto-cols-fr">
             <ProjectTag
               ProjectImage={StyleZ}
-              Link="https://stylez.julianzaw.tech"
+              Link="https://clothes.julianzaw.me"
               Name="Online Clothing Store"
               Year="2024"
               Tag="E-Commerce"
             />
             <ProjectTag
               ProjectImage={ShoeStore}
-              Link="https://solesteals.netlify.app"
+              Link="https://solesteals.julianzaw.me"
               Name="Online Shoe Store"
               Year="2023"
               Tag="E-Commerce"

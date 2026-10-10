@@ -25,7 +25,7 @@ let timelineElements: TimelineElement[] = [
   {
     id: 8,
     title: "Portfolio",
-    url: "https://julianzaw.tech",
+    url: "https://www.julianzaw.me",
     year: "2025",
     duration: "2 mos",
     tag: "My Portfolio",
@@ -68,7 +68,7 @@ let timelineElements: TimelineElement[] = [
   {
     id: 6,
     title: "Online Clothing Store",
-    url: "https://stylez.julianzaw.tech",
+    url: "https://clothes.julianzaw.me",
     year: "2024",
     duration: "3 mos",
     tag: "StyleZ",
@@ -91,7 +91,7 @@ let timelineElements: TimelineElement[] = [
   {
     id: 5,
     title: "Real-Time Chat Application",
-    url: "https://yaps-social.vercel.app",
+    url: "https://yaps.julianzaw.me",
     year: "2024",
     duration: "2 mos",
     tag: "Yaps",
@@ -114,7 +114,7 @@ let timelineElements: TimelineElement[] = [
   {
     id: 4,
     title: "Online Shoe Store",
-    url: "https://solesteals.netlify.app",
+    url: "https://solesteals.julianzaw.me",
     year: "2023",
     duration: "2 mos",
     tag: "SoleSteals",
@@ -135,7 +135,7 @@ let timelineElements: TimelineElement[] = [
   {
     id: 3,
     title: "To Do List",
-    url: "https://todolist-juju.netlify.app",
+    url: "https://todo.julianzaw.me",
     year: "2023",
     duration: "1 mos",
     tag: "Todoer",
@@ -172,7 +172,7 @@ let timelineElements: TimelineElement[] = [
   {
     id: 1,
     title: "Coffee Recipe Website",
-    url: "https://baristachawsu.netlify.app",
+    url: "https://barista.julianzaw.me",
     year: "2023",
     duration: "1 mos",
     tag: "Barista Chaw Su",
