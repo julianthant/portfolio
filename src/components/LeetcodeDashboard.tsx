@@ -1,10 +1,40 @@
-import { fetchStats } from "@/helpers/fetchStats";
 import { montserrat, dm_sans } from "@/library/fonts";
 
-const LeetcodeDashboard = async ({}) => {
-  const stats = await fetchStats(
-    "https://leetcode-stats-api.herokuapp.com/SoyJuju"
+const getLeetcodeStats = async () => {
+  const response = await fetch("https://leetcode.com/graphql", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Referer: "https://leetcode.com",
+    },
+    body: JSON.stringify({
+      query:
+        "query($u:String!){matchedUser(username:$u){profile{ranking} submitStats{acSubmissionNum{difficulty count}}}}",
+      variables: { u: "SoyJuju" },
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Unable to fetch stats`);
+  }
+
+  const { data } = await response.json();
+  const solved: Record<string, number> = Object.fromEntries(
+    data.matchedUser.submitStats.acSubmissionNum.map(
+      (s: { difficulty: string; count: number }) => [s.difficulty, s.count]
+    )
   );
+
+  return {
+    ranking: data.matchedUser.profile.ranking,
+    easySolved: solved.Easy,
+    mediumSolved: solved.Medium,
+    hardSolved: solved.Hard,
+  };
+};
+
+const LeetcodeDashboard = async ({}) => {
+  const stats = await getLeetcodeStats();
 
   return (
     <div className="flex flex-col justify-center items-center gap-6 bg-slate-100 dark:bg-slate-300 shadow-lg px-3 py-3 rounded-lg h-48 text-black">
