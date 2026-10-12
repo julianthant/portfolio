@@ -1,6 +1,6 @@
 # Personal portfolio
 
-My personal site, built with Next.js 15 and React 19. It covers my education, work experience and projects, and keeps a page-view counter in Vercel Blob.
+My personal site, built with Next.js 15 and React 19. I'm a computer science student at UC San Diego building backend automation, AI agents and quant research tools, and I'm looking for Summer 2027 internships. The site covers my education, work experience and projects (including HR-Relay, Tether and Driftwood), and keeps a page-view counter in Vercel Blob.
 
 **Live site:** https://www.julianzaw.me
 

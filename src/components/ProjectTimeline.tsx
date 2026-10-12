@@ -95,15 +95,19 @@ const ProjectTimeline = ({}) => {
               {/* Project Header - matching work experience format */}
               <div className="space-y-1">
                 <h3 className="font-bold max-sm:text-2xl text-3xl text-accent-400">
-                  <a target="_blank" href={element.url}>
-                    {element.title}
-                  </a>
+                  {element.url ? (
+                    <a target="_blank" rel="noopener noreferrer" href={element.url}>
+                      {element.title}
+                    </a>
+                  ) : (
+                    element.title
+                  )}
                 </h3>
                 <h4 className="font-semibold text-gray-700 dark:text-gray-300 text-lg">
                   {element.tag} · {element.category}
                 </h4>
                 <h5 className="text-gray-500 dark:text-gray-400 text-sm">
-                  {element.year} · {element.duration}
+                  {[element.year, element.duration].filter(Boolean).join(" · ")}
                 </h5>
                 <h5 className="text-gray-500 dark:text-gray-400 text-sm">
                   Full-Stack Development · {element.languages.join(" · ")}

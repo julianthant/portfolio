@@ -36,12 +36,11 @@ const page = () => {
             <p
               className={`pt-3 pb-6 ${dm_sans.className} text-slate-500 dark:text-slate-400`}
             >
-              Hello, I'm Julian, a Full-Stack Web Developer specializing in
-              building dynamic applications with React and Node.js. My expertise
-              includes creating robust RESTful APIs, managing databases like
-              MongoDB and PostgreSQL, and deploying full-scale projects. I am a
-              collaborative developer passionate about writing clean, efficient
-              code.
+              I'm a computer science student at UC San Diego. I build backend
+              systems that replace manual work with reliable automation, and
+              lately I've been building AI agents and quant research tools.
+              I'm looking for Summer 2027 internships in software engineering,
+              AI agents and quant.
             </p>
             <ViewCounter />
           </div>

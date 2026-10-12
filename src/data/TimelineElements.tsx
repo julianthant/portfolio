@@ -6,14 +6,15 @@ import SoleSteals from "@/assets/shoe-website.webp";
 import Yaps from "@/assets/yaps-website.webp";
 import StyleZ from "@/assets/stylez-store.png";
 import TwisterCambodia from "@/assets/twistercambodia.png";
+import ProjectPlaceholder from "@/assets/project-placeholder.png";
 import { StaticImageData } from "next/image";
 
 export interface TimelineElement {
   id: number;
   title: string;
-  url: string;
+  url?: string;
   year: string;
-  duration: string;
+  duration?: string;
   tag: string;
   category: string;
   languages: string[];
@@ -22,6 +23,77 @@ export interface TimelineElement {
 }
 
 let timelineElements: TimelineElement[] = [
+  {
+    id: 13,
+    title: "Tether (In Progress)",
+    year: "2026",
+    tag: "Tether",
+    category: "AI Agents",
+    languages: ["Python"],
+    image: ProjectPlaceholder,
+    description: [
+      "Tether is a Python harness, planned with LangGraph and LangChain, that will let an AI coding agent work for hours without free rein over the machine, and will save progress to SQLite so a killed run can resume.",
+      "Planner, coder, tester and reviewer agents will send failing tests and review notes back to the coder, while MCP tools keep file access inside one folder, run only approved commands and log each request.",
+      "Stack: Python, LangGraph, LangChain, FastMCP, SQLite",
+    ],
+  },
+  {
+    id: 12,
+    title: "Driftwood (In Progress)",
+    year: "2026",
+    tag: "Driftwood",
+    category: "Quant Research",
+    languages: ["Python", "C++"],
+    image: ProjectPlaceholder,
+    description: [
+      "Planned as a Python research pipeline for US stocks, Driftwood will keep daily market data in DuckDB and train linear and LightGBM models on momentum and volatility signals, tested on later periods it never saw.",
+      "A C++ simulator called from Python via pybind11 aims to estimate fees and slippage for TWAP, VWAP and immediate orders, and an AI agent will draft research ideas a human approves before Alpaca paper trading.",
+      "Stack: Python, C++17, pybind11, DuckDB, LightGBM",
+    ],
+  },
+  {
+    id: 11,
+    title: "HR-Relay",
+    url: "https://github.com/julianthant/hr-relay",
+    year: "2026",
+    tag: "HR-Relay",
+    category: "Automation",
+    languages: ["TypeScript"],
+    image: ProjectPlaceholder,
+    description: [
+      "Built an automation tool in TypeScript and Hono, using Playwright to sign into UCPath, CRM and I-9 through Duo to run employee onboardings, separations and lookups, tracked on a live React dashboard.",
+      "Guarded against duplicate HR records by pausing for a person when a submission's outcome is unclear, alongside a SQLite queue that survives restarts, dry-run previews, change receipts and about 700 Vitest tests.",
+      "Stack: TypeScript, Hono, SQLite, React, Playwright, Vitest",
+    ],
+  },
+  {
+    id: 10,
+    title: "Scribe",
+    year: "2025",
+    tag: "Scribe",
+    category: "Automation",
+    languages: ["Python"],
+    image: ProjectPlaceholder,
+    description: [
+      "Built Scribe, a shared, timestamped log any teammate could pick up, after handwritten voicemail notes left no trace of who worked a claim or where they stopped.",
+      "Written in Python and FastAPI to pull claim voicemails from an Outlook mailbox through Microsoft Graph with OAuth client credentials, transcribe them with Azure Speech-to-Text, and log each call to a shared tracker.",
+    ],
+  },
+  {
+    id: 9,
+    title: "fast-duo",
+    url: "https://github.com/julianthant/fast-duo",
+    year: "2026",
+    tag: "fast-duo",
+    category: "Browser Extension",
+    languages: ["JavaScript"],
+    image: ProjectPlaceholder,
+    description: [
+      "Manifest V3 Chrome extension for local Duo authentication",
+      "Guided WebAuthn enrollment",
+      "MIT licensed",
+    ],
+  },
   {
     id: 8,
     title: "Portfolio",

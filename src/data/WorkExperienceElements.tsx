@@ -3,6 +3,7 @@ import BaristaChawSuLogo from "@/assets/company/baristachawsu.png";
 import SamsungSDSLogo from "@/assets/company/samsung.jpg";
 import SMCLogo from "@/assets/company/smc.jpg";
 import StyleNationLogo from "@/assets/company/style-nation.png";
+import UCSDLogo from "@/assets/company/ucsd.jpg";
 import { StaticImageData } from "next/image";
 
 interface WorkExperienceElement {
@@ -19,18 +20,33 @@ interface WorkExperienceElement {
 
 const workExperienceElements: WorkExperienceElement[] = [
   {
+    id: 0,
+    title: "Student Assistant - STDT 4 RRSS Human Resources",
+    company: "University of California, San Diego",
+    location: "San Diego, California, United States",
+    year: "2025",
+    period: "Oct 2025 - Present",
+    type: "Part-time",
+    image: UCSDLogo,
+    description: [
+      "• Found onboarding, separations, and employee lookups done by hand and, outside the student assistant role, independently proposed and built an internal automation platform for UCPath, I-9, CRM, and EDMS.",
+      "• Led onboarding for 200+ employees per quarter and automated account provisioning, validation checks, system access setup, and document routing, cutting hours of coordination per hiring cycle.",
+      "• Migrated 1000+ department's paper records into EDMS with standardized naming conventions and automation-assisted document handling, reducing record lookup from a manual search to a keyword query.",
+    ],
+  },
+  {
     id: 1,
-    title: "SJDV Program Assistant",
-    company: "Santa Monica College",
+    title: "Student Assistant - Insurance Claims",
+    company: "Santa Monica College (Emeritus)",
     location: "Los Angeles, California, United States",
     year: "2024",
-    period: "Dec 2024 - Present · 8 mos",
+    period: "Dec 2024 - Aug 2025",
     type: "Part-time",
     image: SMCLogo, // Placeholder for company logo
     description: [
-      "• Created and managed 300+ detailed invoices and expedited 200+ insurance payments to Ed2Go on behalf of injured workers by coordinating directly with claims adjusters, and resolving payment issues.",
-      "• Increased program revenue by $100,000+ by optimizing internal workflows, reducing processing latency, and scaling operational throughput to accommodate higher task volume.",
-      "• Trained and onboarded new team members in all core operations, including Microsoft Teams, Trello workflows, payment systems, and student support procedures, ensuring team readiness.",
+      "• Built Scribe, a shared, timestamped log any teammate could pick up, after handwritten voicemail notes left no trace of who worked a claim or where they stopped, saving 10+ hours a week.",
+      "• Wrote Scribe in Python and FastAPI to pull claim voicemails from an Outlook mailbox through Microsoft Graph with OAuth client credentials, transcribe them with Azure Speech-to-Text, and log each call to a shared tracker.",
+      "• Administered the Supplemental Job Displacement Benefits program for 300+ active claims and $100K+ in benefits, handling invoices and adjuster communication, and resolved 100+ weekly inquiries at 90% first-contact resolution.",
     ],
   },
   {
@@ -39,7 +55,7 @@ const workExperienceElements: WorkExperienceElement[] = [
     company: "Tell Us Cafe",
     location: "Mandalay, Myanmar",
     year: "2023",
-    period: "Sep 2023 - Nov 2023 · 3 mos",
+    period: "Sep 2023 - Nov 2023",
     type: "Full-time",
     image: BaristaChawSuLogo, // Placeholder for company logo
     description: [
@@ -54,7 +70,7 @@ const workExperienceElements: WorkExperienceElement[] = [
     company: "Style Nation",
     location: "Mandalay, Myanmar",
     year: "2023",
-    period: "July 2021 - Nov 2023 · 2 yrs 5 mos",
+    period: "July 2021 - Nov 2023",
     type: "Hybrid",
     image: StyleNationLogo,
     description: [
@@ -69,14 +85,13 @@ const workExperienceElements: WorkExperienceElement[] = [
     company: "KBZ Bank",
     location: "Yangon, Myanmar",
     year: "2023",
-    period: "May 2023 - Aug 2023 · 4 mos",
+    period: "May 2023 - Aug 2023",
     type: "Internship",
     image: KBZBankLogo,
     description: [
-      "• Collaborated with cross-functional teams to troubleshoot 100+ technical issues across MacOS and Windows, strengthening client satisfaction and service reliability.",
-      "• Resolved 100+ technical issues across MacOS and Windows systems by troubleshooting hardware, software, and network configurations, ensuring minimal downtime.",
-      "• Facilitated user education by creating documentation for CRM, Google Workspace, and Zoom tools, enhancing internal support communication.",
-      "• Supported rollout of Duo Multi-Factor Authentication (MFA), helping reduce post-launch security concerns by 14% and boosting user confidence across departments.",
+      "• Wrote SQL queries joining transaction and account tables, using aggregations and date-range filtering to produce summary reports of customer activity for internal reporting.",
+      "• Wrote JUnit unit tests for a Java/Spring Boot service class and REST endpoint, covering business logic and request handling in a system processing live financial data.",
+      "• Implemented Burmese/English localization in the web frontend by externalizing UI text into translation resource files and adding a language switcher, so the interface could be used in either language.",
     ],
   },
   {
@@ -85,7 +100,7 @@ const workExperienceElements: WorkExperienceElement[] = [
     company: "SAMSUNG SDS THAILAND",
     location: "Bangkok City, Thailand",
     year: "2022",
-    period: "Mar 2022 - Jun 2022 · 4 mos",
+    period: "Mar 2022 - Jun 2022",
     type: "Internship",
     image: SamsungSDSLogo, // Placeholder for company logo
     description: [
